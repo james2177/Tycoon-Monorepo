@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { JSX } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -9,7 +10,7 @@ export const metadata: Metadata = generateBaseMetadata({
   description: 'Tycoon Privacy Policy - Learn how we handle your data',
 });
 
-export default function PrivacyPolicyPage() {
+export default function PrivacyPolicyPage(): JSX.Element {
   return (
     <main className="min-h-screen bg-[var(--tycoon-bg)]">
       {/* Header */}
