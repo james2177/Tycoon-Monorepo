@@ -1,4 +1,4 @@
-# Tycoon Monorepo
+# TYNS Monorepo
 
 ## ⚠️ Setup Required
 
