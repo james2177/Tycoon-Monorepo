@@ -10,6 +10,16 @@ pub struct FeeConfig {
     pub pool_address: Address,
 }
 
+impl FeeConfig {
+    /// Validates that total fees do not exceed 10,000 bps (100%).
+    pub fn is_valid(&self) -> bool {
+        self.platform_fee_bps
+            .saturating_add(self.creator_fee_bps)
+            .saturating_add(self.pool_fee_bps)
+            <= 10_000
+    }
+}
+
 #[contracttype]
 #[derive(Clone, Debug, Eq, PartialEq)]
 pub struct FeeSplit {
